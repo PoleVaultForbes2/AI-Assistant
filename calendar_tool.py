@@ -52,15 +52,3 @@ def add_event_to_calendar(title="New Event", start_time=None, duration_minutes=6
 
     created_event = service.events().insert(calendarId='primary', body=event).execute()
     return f"✅ Event created: {created_event.get('htmlLink')}"
-
-
-# def add_to_calendar(_=None):
-#     # In real usage, parse _ for datetime, title, etc.
-#     return add_event_to_calendar(title="Meeting with Josh", duration_minutes=45)
-
-
-# calendar_tool = Tool(
-#     name="Calendar Tool",
-#     func=add_to_calendar,
-#     description="Use this to add an event to the user's calendar. Accepts a title, date, and time."
-# )
