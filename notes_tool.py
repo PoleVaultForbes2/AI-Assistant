@@ -20,9 +20,3 @@ def read_notes(_: str = "") -> str:
         return "Here are your notes:\n" + "".join(notes)
     except FileNotFoundError:
         return "No notes found yet."
-
-# notes_tool = Tool(
-#     name="Notes Tool",
-#     func=save_note,
-#     description="Use this to save a short note. Input should be the text of the note."
-# )
