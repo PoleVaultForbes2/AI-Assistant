@@ -38,22 +38,3 @@ def add_event_to_calendar_node(state: Dict) -> Dict:
         return {"output": f"❌ Failed to parse calendar input: {e}"}
     except Exception as e:
         return {"output": f"❌ Unexpected error: {e}"}
-
-    # structured = llm.invoke(prompt)
-    #
-    # try:
-    #     import json
-    #     event_info = json.loads(structured)
-    #
-    #     # Parse time to datetime object
-    #     start_time = datetime.strptime(event_info["start_time"], "%Y-%m-%d %H:%M")
-    #     result = add_event_to_calendar(
-    #         title=event_info["title"],
-    #         start_time=start_time,
-    #         duration_minutes=event_info["duration_minutes"]
-    #     )
-    # except Exception as e:
-    #     result = f"❌ Failed to parse calendar input: {e}"
-    #
-    # state["output"] = result
-    # return state
