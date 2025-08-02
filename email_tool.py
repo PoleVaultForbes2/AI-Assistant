@@ -133,22 +133,3 @@ Body:
         ]
     )
     return response['message']['content'].strip()
-
-
-# def summarize_emails(_=None):
-#     emails = fetch_icloud_emails(3)
-#     if not emails:
-#         return "No emails found."
-#
-#     summaries = []
-#     for i, email_data in enumerate(emails, start=1):
-#         summary = summarize_email(email_data)
-#         summaries.append(f"Email {i}:\n{summary}")
-#     return "\n\n".join(summaries)
-#
-#
-# email_tool = Tool(
-#     name="Email Summarizer",
-#     func=summarize_emails,
-#     description="Use this to summarize the user's latest emails."
-# )
